@@ -1,14 +1,18 @@
+import "@/styles"
 import { Head } from "minista"
 import Header from "./layouts/Header"
-import Content from "./layouts/Content";
+import Content from "./layouts/Content"
 import Footer from "./layouts/Footer"
 
-export default () => {
+export default (props) => {
+
+  const { title } = props
 
   return (
     <>
-      <Head>
-        <title>FromBoard-Delivery | Home</title>
+      <Head htmlAttributes={{ lang: 'en' }}>
+        <title>FromBoard-Delivery | {title } </title>
+        <script src="/src/main.js" type="module"></script>
       </Head>
 
       <Header />

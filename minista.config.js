@@ -1,5 +1,6 @@
 // minista.config.ts
 import { defineConfig } from "minista"
+import path from "path"
 
 export default defineConfig({
   root: "",
@@ -62,7 +63,10 @@ export default defineConfig({
     },
   },
   resolve: {
-    alias: [],
+    alias: [{
+      find: "@",
+      replacement: path.resolve('src')
+    }],
   },
   css: {
     modules: {
@@ -73,7 +77,14 @@ export default defineConfig({
       localsConvention: "camelCaseOnly",
     },
     preprocessorOptions: {
-      scss: {},
+      scss: {
+        // Автоматически подключаем helpers во все SCSS-файлы
+        additionalData: `
+          @use '@/styles/helpers' as *;
+        `,
+        // Убираем варнинги от старого API
+        silenceDeprecations: ['legacy-js-api'],
+      },
       less: {},
       stylus: {},
     },
@@ -130,5 +141,9 @@ export default defineConfig({
       indent_size: 2,
     },
   },
-  vite: {},
+  vite: {
+    css: {
+      devSourcemap: true,
+    },
+  },
 })

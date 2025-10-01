@@ -1,0 +1,31 @@
+.burgerButton {
+
+  position: relative;
+  width: 24px;
+  height: 16px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  background-image: url("/public/icons/burger-button/burger-button-open.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  &--open {
+    height: 20px;
+    background-image: url("/public/icons/burger-button/burger-button-close.svg");
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    transform: translate(-50%, -50%);
+    background: transparent;
+  }
+
+
+
+}

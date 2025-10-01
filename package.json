@@ -17,6 +17,7 @@
     "sass": "^1.93.2"
   },
   "dependencies": {
+    "@a1rth/css-normalize": "^1.2.1",
     "clsx": "^2.1.1"
   }
 }
