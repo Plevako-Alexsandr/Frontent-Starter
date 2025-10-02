@@ -1,4 +1,3 @@
-
 html {
   &.is-lock {
     overflow: hidden;
@@ -11,22 +10,22 @@ body {
   display: flex;
   flex-direction: column;
   font-family: var(--font-family-base), sans-serif;
-  color: var(--color-white);
-  // background-color: var(--color-black);
+  color: var(--color-gray-900);
+  background-color: var(--color-gray-200);
 }
 
 h1,
 .h1 {
   @include fluid-text(36, 30);
 
-  font-weight: var(--font-weight-black);
+  font-weight: 900;
+  line-height: #{calc-line-height(36, 40)};
 }
 
 h2,
 .h2 {
-  @include fluid-text(48, 24);
-
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 900;
 }
 
 h3,

@@ -6,7 +6,7 @@ import Footer from "./layouts/Footer"
 
 export default (props) => {
 
-  const { title } = props
+  const { title, children, url} = props
 
   return (
     <>
@@ -16,7 +16,7 @@ export default (props) => {
       </Head>
 
       <Header />
-      <Content />
+      <Content>{children}</Content>
       <Footer />
     </>
   )

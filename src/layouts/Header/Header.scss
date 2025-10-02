@@ -4,16 +4,16 @@
   white-space: nowrap;
 
   &__wrapper {
+
+    margin-block: 24px;
+  }
+
+  &__head {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    column-gap: 20px;
-    row-gap: 24px;
-
-    margin-top: 24px;
+    column-gap: 60px;
     margin-bottom: #{fluid(24, 12)};
-
   }
 
   &__info {
@@ -27,6 +27,15 @@
         display: none;
       }
     }
+
+    @include laptop {
+      max-width: 659px
+    }
+
+    @include tablet {
+      max-width: 229px
+    }
+
   }
 
   &__about {
@@ -36,9 +45,9 @@
 
     &-description {
       @include tablet {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        
+        @include flex-center;
+
         max-width: 232px;
         column-gap: 8px;
         text-align: center;
@@ -46,10 +55,9 @@
     }
 
     &--desktop {
-      max-width: 349px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-around;
       align-items: end;
     }
 
@@ -63,8 +71,8 @@
         font-size: 14px;
       }
 
-      @include tablet-small {
-        padding-inline: 0;
+      @include mobile {
+        padding: 0;
       }
 
     }
@@ -73,7 +81,6 @@
   }
 
   &__contacts {
-    max-width: 343px;
     text-align: right;
 
     @include mobile {
@@ -83,31 +90,49 @@
     }
 
     &-phone {
-      @include fluid-text(36, 24);
-
+      @include fluid-text(36, 30);
+      
       font-weight: 900;
+      
+      @include laptop {
+        @include fluid-text(30, 24);
+
+      }
+
+      @include tablet {
+        font-size: 24px;
+      }
 
       @include mobile {
         font-size: 20px;
       }
+
     }
 
     &-title {
-      @include fluid-text(24, 16);
-
+      @include fluid-text(24, 20);
+      
       font-weight: 300;
+      
+      @include laptop {
+        @include fluid-text(20, 16);
+      }
+
+      @include tablet {
+        font-size: 16px;
+      }
 
     }
 
   }
 
   &__menu {
-    flex-basis: 100%;
 
     &-wrapper {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      column-gap: 20px;
       border-block: 2px solid transparent;
 
       @include tablet {
@@ -118,11 +143,20 @@
         margin-bottom: 12px;
       }
 
+      @include mobile {
+        padding-inline: 24px;
+      }
+
     }
+  }
+
+  &__button {
+    max-width: 196px;
   }
 
   &__nav {
     max-width: 372px;
+    margin-right: 24px;
 
     &-list {
       display: flex;

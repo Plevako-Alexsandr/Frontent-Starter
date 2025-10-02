@@ -1,3 +1,13 @@
 .logo {
-  width: #{fluid(305, 243)};
+  flex-shrink: 0;
+  width: 305px;
+  
+  @include tablet {
+    width: #{fluid(305, 243)};
+  }
+
+  @include mobile {
+    width: 243px;
+  }
+
 }

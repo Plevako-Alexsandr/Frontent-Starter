@@ -1,0 +1,8 @@
+.content {
+  padding-block: #{fluid-to-laptop(72, 48)};
+  
+  @include laptop {
+    padding-block: #{fluid-to-laptop(48, 40)};
+  }
+
+}

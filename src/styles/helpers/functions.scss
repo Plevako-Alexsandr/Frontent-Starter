@@ -24,6 +24,10 @@
   );
 }
 
+@function calc-line-height($font-size : 16px, $line-height: 20px) {
+  @return calc($line-height / $font-size);
+}
+
 @function fluid-to-laptop($max: 100, $min: 10) {
   @return fluid($max, $min, true);
 }

@@ -1,0 +1,137 @@
+.hero {
+
+  margin-bottom: var(--container-margin-y);
+
+  &__wrapper {
+    display: flex;
+    column-gap: 24px;
+
+    @include laptop {
+      flex-direction: column;
+    }
+
+  }
+
+  &__title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 756px;
+    row-gap: 16px;
+
+    @include laptop {
+      flex-direction: row;
+      align-items: stretch;
+      max-width: 100%;
+      column-gap: 16px;
+      max-height: 232px;
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      max-height: 100%;
+    }
+
+    &-header {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      row-gap: 12px;
+
+      @include mobile {
+        min-height: 168px;
+      }
+
+    }
+
+    &-body {
+      flex: 1;
+
+      img {
+        height: 100%;
+        border-radius: 16px;
+      }
+    }
+
+    &-heading {
+
+      @include laptop {
+        font-size: 30px;
+      }
+
+    }
+
+    &-description {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: #{calc-line-height(20, 28)};
+
+      @include laptop {
+        text-align: start;
+      }
+
+    }
+
+
+  }
+
+  &__form {
+    flex: 1;
+    white-space: nowrap;
+    padding-block: 24px;
+    background-color: var(--color-gray-50);
+    border-radius: 16px;
+
+    &-header {
+      max-width: 358px;
+      margin-inline: auto;
+      margin-bottom: 28px;
+    }
+
+    &-body {
+      max-width: 496px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      @include laptop {
+        max-width: 606px;
+      }
+
+      @include mobile {
+        max-width: 100%;
+        padding-inline: 35px;
+      }
+
+    }
+
+    &-heading {
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    &-description {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    &-field {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 24px;
+    }
+
+    &-button {
+      max-width: 100%;
+      // width: 100%;
+    }
+
+  }
+
+}

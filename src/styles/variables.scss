@@ -1,10 +1,11 @@
 :root {
   --color-black: #000000;
   --color-gray-50: #F9FAFB;
+  --color-gray-200: #E5E7EB;
   --color-gray-400: #9CA3AF;
   --color-gray-500: #6B7280;
   --color-gray-600: #4B5563;
-  --color-dark-900: #111827;
+  --color-gray-900: #111827;
 
   --color-purple-500: #8B5CF6; // accent
 
@@ -16,7 +17,6 @@
   --button-padding-inline: 28px;
 
   --input-height: 48px;
-  --input-width: 48px;
   --input-border: 2px;
   --input-border-radius: 4px;
   --input-padding: 12px;
@@ -30,4 +30,24 @@
   --transition-duration: 0.3ms;
 
   --layer-mobile-menu: 100;
+}
+
+
+@include laptop {
+  :root {
+    --container-width: #{$container-laptop-width}px;
+    --container-margin-y: 48px;
+  }
+}
+
+@include tablet {
+  :root {
+    --container-width: #{$container-tablet-width}px;
+  }
+}
+
+@include mobile {
+  :root {
+    --container-margin-y: 40px;
+  }
 }

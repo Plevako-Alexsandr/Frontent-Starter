@@ -17,40 +17,41 @@ export default () => {
     <>
       <header className="header" data-js-header="">
         <div className="header__wrapper container">
+          <div className="header__head">
+            <Logo
+              className="header__logo"
+              loading="eager"
+            />
 
-          <Logo
-            className="header__logo"
-            loading="eager"
-          />
+            <div className="header__info">
+              <div className="header__about header__about--desktop hidden-tablet">
+                <p className="header__about-description">
+                  Доставляем товары из заграницы в Россию
+                </p>
+                <p className="header__about-description">
+                  Стоимость от 550 рублей за заказ
+                </p>
+                <p className="header__about-currency currency">
+                  1 $ = 93 ₽ | 1 € = 99 ₽ | 1 ¥ = 13 ₽
+                </p>
+              </div>
+              <div className="header__info-separator"></div>
+              <div className="header__contacts">
+                <a
+                  className="header__contacts-phone"
+                  href="tel:+78001234567"
+                >
+                  +7 (800) 123 45-67
+                </a>
+                <p className="header__contacts-title hidden-mobile">
+                  Звонки по России бесплатны
+                </p>
 
-          <div className="header__info">
-            <div className="header__about header__about--desktop hidden-tablet">
-              <p className="header__about-description">
-                Доставляем товары из заграницы в Россию
-              </p>
-              <p className="header__about-description">
-                Стоимость от 550 рублей за заказ
-              </p>
-              <p className="header__about-currency currency">
-                1 $ = 93 ₽ | 1 € = 99 ₽ | 1 ¥ = 13 ₽
-              </p>
-            </div>
-            <div className="header__info-separator"></div>
-            <div className="header__contacts">
-              <a
-                className="header__contacts-phone"
-                href="tel:+78001234567"
-              >
-                +7 (800) 123 45-67
-              </a>
-              <p className="header__contacts-title hidden-mobile">
-                Звонки по России бесплатны
-              </p>
-
-              <BurgerButton
-                className="header__burgerButton"
-                extraAttrs={{'data-js-mobile-menu-burger-button':""}}
-              />
+                <BurgerButton
+                  className="header__burgerButton"
+                  extraAttrs={{ 'data-js-mobile-menu-burger-button': "" }}
+                />
+              </div>
             </div>
           </div>
 
@@ -84,13 +85,14 @@ export default () => {
               <Button className="header__button" />
             </div>
 
-            <div class="header__about header__about--tablet visible-tablet">
-              <p class="header__about-description">Доставляем товары <br /> из заграницы в Россию</p>
-              <p class="header__about-description">Стоимость от 550 рублей <br /> за заказ</p>
-              <p class="header__about-currency currency" data-currency="currency">1 $ = 93 ₽ | 1 € = 99 ₽ | 1 ¥ = 13 ₽</p>
+            <div className="header__about header__about--tablet visible-tablet">
+              <p className="header__about-description">Доставляем товары <br /> из заграницы в Россию</p>
+              <p className="header__about-description">Стоимость от 550 рублей <br /> за заказ</p>
+              <p className="header__about-currency currency" data-currency="currency">1 $ = 93 ₽ | 1 € = 99 ₽ | 1 ¥ = 13 ₽</p>
             </div>
 
           </div>
+
         </div>
 
       </header>
