@@ -1,6 +1,7 @@
 import './Hero.scss'
 import { Image } from 'minista'
 import Field from '@/components/Field'
+import Button from '@/components/Button'
 
 
 export default () => {
@@ -96,7 +97,7 @@ export default () => {
               />
             </div>
 
-            <button className="hero__form-button button" type="submit">Заказать расчёт</button>
+            <Button className="hero__form-button button" type="submit">Заказать расчёт</Button>
           </div>
         </form>
 

@@ -1,14 +1,14 @@
 .field {
+  display: flex;
   flex: 1;
   font-weight: 400;
   font-size: 16px;
   color: var(--color-gray-400);
 
 
-  &__input {
-    width: 100%;
-    min-width: 236px;
-    height: var(--input-height);
+  &__input,
+  &__textarea {
+    width: calc(100% + var(--input-border) * 2);
     border: var(--input-border) solid var(--color-gray-900);
     border-radius: var(--input-border-radius);
     padding: var(--input-padding);
@@ -20,10 +20,12 @@
     }
   }
 
-  &-textarea {
-    min-width: 100%;
-    min-height: 150px;
+  &__input {
+    height: var(--input-height);
+  }
 
+  &__textarea {
+    min-height: 150px;
     resize: none;
   }
 }

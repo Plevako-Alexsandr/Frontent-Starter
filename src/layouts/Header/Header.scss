@@ -151,12 +151,11 @@
   }
 
   &__button {
-    max-width: calc(196px + (var(--button-border-radius-x) * 2));
+    max-width: 196px;
   }
 
   &__nav {
     max-width: 372px;
-    margin-right: 24px;
 
     &-list {
       display: flex;

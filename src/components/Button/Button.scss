@@ -6,9 +6,8 @@
   height: var(--button-height-x);
   white-space: nowrap;
   border-radius: var(--button-border-radius-x);
-  padding: 0 var(--button-padding-inline);
-  border-block: 0;
-  border-inline: var(--border-size-l) solid transparent;
+  padding-inline: var(--button-padding-inline);
+  border: var(--border-size-l) solid transparent;
   font-weight: 700;
   font-size: 16px;
 

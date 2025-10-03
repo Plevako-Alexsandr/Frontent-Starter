@@ -24,6 +24,7 @@
 
   --link-height: 44px;
 
+  --border-size-x: 4px;
   --border-size-l: 2px;
 
   --container-width: #{$container-desktop-width}px;
@@ -51,6 +52,7 @@
 
 @include mobile {
   :root {
+    --container-width: #{$container-mobile-width}px;
     --container-margin-y: 40px;
   }
 }

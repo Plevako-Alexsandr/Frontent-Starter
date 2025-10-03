@@ -11,6 +11,7 @@ export default (props) => {
     placeholder,
     type = "text",
     required = "required",
+    elementType = "input"
   } = props
 
   return (
@@ -20,14 +21,24 @@ export default (props) => {
         htmlFor={id}
       >
       </label>
-      <input
-        className="field__input"
-        id={id}
-        name={name}
-        placeholder={placeholder}
-        type={type}
-        required={required}
-      />
+      {elementType === "textarea" ? (
+        <textarea
+          className="field__textarea"
+          id={id}
+          name={name}
+          placeholder={placeholder}
+          required={required}
+        />
+      ) : (
+        <input
+          className="field__input"
+          id={id}
+          name={name}
+          placeholder={placeholder}
+          type={type}
+          required={required}
+        />
+      )}
     </div>
   )
 }
