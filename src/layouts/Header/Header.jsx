@@ -82,7 +82,7 @@ export default () => {
                 </ul>
               </nav>
 
-              <Button className="header__button" />
+              <Button className="header__button">Оставить заявку</Button>
             </div>
 
             <div className="header__about header__about--tablet visible-tablet">

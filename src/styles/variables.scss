@@ -11,9 +11,10 @@
 
   --font-family-base: "Formular", serif;
 
-  --button-height: 44px;
-  --button-height-large: 56px;
-  --button-radius: 4px;
+  --button-height-xl: 56px;
+  --button-height-x: 44px;
+  --button-border-radius-xl: 12px;
+  --button-border-radius-x: 4px;
   --button-padding-inline: 28px;
 
   --input-height: 48px;
@@ -22,6 +23,8 @@
   --input-padding: 12px;
 
   --link-height: 44px;
+
+  --border-size-l: 2px;
 
   --container-width: #{$container-desktop-width}px;
   --container-margin-y: 72px;

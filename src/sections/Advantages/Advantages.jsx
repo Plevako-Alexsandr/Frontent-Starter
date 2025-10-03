@@ -49,8 +49,8 @@ export default () => {
         <div className="advantages__body">
           <ul className="advantages__list">
             {advantages.map((advantage, index) => {
-              const { imagePath, title, description } = advantage
 
+              const { imagePath, title, description } = advantage
 
               return (
                 <li className="advantages__item" key={index}>

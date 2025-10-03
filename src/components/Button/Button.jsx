@@ -2,11 +2,11 @@ import "./Button.scss"
 import clsx from "clsx"
 
 export default ( props ) => {
-  const { className } = props
+  const { className, children } = props
 
   return (
     <>
-      <button className={clsx(className, 'button')}>Оставить заявку</button>
+      <button className={clsx('button', className)}>{children}</button>
     </>
   )
 

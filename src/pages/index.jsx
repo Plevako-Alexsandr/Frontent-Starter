@@ -1,5 +1,6 @@
-import Advantages from "@/sections/Advantages"
 import Hero from "@/sections/Hero"
+import Advantages from "@/sections/Advantages"
+import Guarantees from "@/sections/Guarantees"
 
 
 
@@ -13,6 +14,7 @@ export default () => {
     <>
       <Hero />
       <Advantages />
+      <Guarantees />
     </>
   )
 }
