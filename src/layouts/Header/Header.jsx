@@ -18,6 +18,7 @@ export default () => {
             <Logo
               className="header__logo"
               loading="eager"
+              theme="dark"
             />
 
             <div className="header__info">

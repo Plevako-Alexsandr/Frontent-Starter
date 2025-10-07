@@ -3,7 +3,7 @@ import clsx from "clsx"
 
 export default (props) => {
 
-  const { className } = props
+  const { className, condition} = props
 
 
   const navLinks = [
@@ -14,7 +14,10 @@ export default (props) => {
   ]
 
   return (
-    <nav className={clsx("navigation", `${className}`)}>
+    <nav className={clsx("navigation", `${className}`, {
+      "visible-tablet" : condition === "visible-tablet",
+      "hidden-tablet" : condition === "hidden-tablet"
+    })}>
       <ul className={clsx("navigation__list", `${className}-list`)}>
         {navLinks.map((link, index) => {
 
