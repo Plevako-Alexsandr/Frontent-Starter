@@ -17,11 +17,9 @@
   $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
   $yAxisIntersections: -$minWidth * $slope + $minSize;
 
-  @return clamp(
-    #{$minSize * 1rem},
+  @return clamp(#{$minSize * 1rem},
     #{$yAxisIntersections * 1rem} + #{$slope * 100vw},
-    #{$maxSize * 1rem}
-  );
+    #{$maxSize * 1rem});
 }
 
 @function calc-line-height($font-size : 16px, $line-height: 20px) {
@@ -31,3 +29,4 @@
 @function fluid-to-laptop($max: 100, $min: 10) {
   @return fluid($max, $min, true);
 }
+

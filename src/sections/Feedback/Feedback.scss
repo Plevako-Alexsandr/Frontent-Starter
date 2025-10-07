@@ -1,0 +1,86 @@
+.feedback {
+
+  margin-bottom: var(--container-margin-y);
+
+  &__header {
+    max-width: 131px;
+    margin-inline: auto;
+    margin-bottom: 32px;
+  }
+
+  &__body {
+    position: relative;
+  }
+
+  &__slider {
+    max-width: 1276px;
+    margin-inline: auto;
+
+    @include laptop {
+      max-width: 816px;
+    }
+
+    @include tablet {
+      max-width: 570px;
+    }
+
+    @include mobile {
+      max-width: 442px;
+    }
+
+  }
+
+  &__item {
+    height: 350px;
+    background-color: var(--color-gray-50);
+    padding: 32px 43px;
+    border-radius: 16px;
+
+    @include laptop {
+      height: 276px;
+    }
+
+    @include tablet {
+      height: 224px;
+    }
+
+    @include mobile {
+      height: 280px;
+    }
+
+    &-wrapper {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      row-gap: 24px;
+      background-image: url("/public/icons/slider/slider-bg-icon.svg");
+      background-size: 75px;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    }
+
+    &-quote {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: #{calc-line-height(24, 32)};
+
+      @include laptop {
+        font-size: 18px;
+      }
+
+    }
+
+    &-cite {
+      font-size: 24px;
+      font-weight: 300;
+
+      @include laptop {
+        font-size: 16px;
+      }
+    }
+
+
+  }
+
+}

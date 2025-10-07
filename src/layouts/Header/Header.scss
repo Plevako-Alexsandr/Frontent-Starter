@@ -36,6 +36,9 @@
       max-width: 229px
     }
 
+    @include mobile {
+      align-items: center;
+    }
   }
 
   &__about {
@@ -45,7 +48,7 @@
 
     &-description {
       @include tablet {
-        
+
         @include flex-center;
 
         max-width: 232px;
@@ -80,52 +83,6 @@
 
   }
 
-  &__contacts {
-    text-align: right;
-
-    @include mobile {
-      display: flex;
-      align-items: center;
-      column-gap: 16px;
-    }
-
-    &-phone {
-      @include fluid-text(36, 30);
-      
-      font-weight: 900;
-      
-      @include laptop {
-        @include fluid-text(30, 24);
-
-      }
-
-      @include tablet {
-        font-size: 24px;
-      }
-
-      @include mobile {
-        font-size: 20px;
-      }
-
-    }
-
-    &-title {
-      @include fluid-text(24, 20);
-      
-      font-weight: 300;
-      
-      @include laptop {
-        @include fluid-text(20, 16);
-      }
-
-      @include tablet {
-        font-size: 16px;
-      }
-
-    }
-
-  }
-
   &__menu {
 
     &-wrapper {
@@ -152,44 +109,5 @@
 
   &__button {
     max-width: 196px;
-  }
-
-  &__nav {
-    max-width: 372px;
-
-    &-list {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      column-gap: 24px;
-    }
-
-    &-link {
-
-      display: inline-flex;
-      align-items: center;
-
-      height: 44px;
-      font-weight: 700;
-      font-size: 16px;
-      color: var(--color-gray-900);
-      border-bottom: 2px dashed transparent;
-
-      &--selected {
-        text-decoration-line: underline;
-        text-decoration-style: dashed;
-        text-underline-offset: 5px;
-      }
-
-      &:hover {
-        cursor: pointer;
-        color: var(--color-purple-500);
-      }
-
-      // &:active,
-      // &:focus {
-      //   border: 1px solid black;
-      // }
-    }
   }
 }

@@ -1,0 +1,38 @@
+.navigation {
+  max-width: 372px;
+  white-space: nowrap;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 24px;
+  }
+
+  &__link {
+
+    display: inline-flex;
+    align-items: center;
+
+    height: 44px;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color-gray-900);
+
+    &--selected {
+      text-decoration-line: underline;
+      text-decoration-style: dashed;
+      text-underline-offset: 5px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: var(--color-purple-500);
+    }
+
+    // &:active,
+    // &:focus {
+    //   border: 1px solid black;
+    // }
+  }
+}

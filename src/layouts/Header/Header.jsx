@@ -1,21 +1,18 @@
 import "./Header.scss"
-import clsx from "clsx"
 import Logo from "@/components/Logo"
 import Button from "@/components/Button"
 import BurgerButton from "@/components/BurgerButton"
+import Navigation from "@/components/Navigation"
+import Contacts from "@/components/Contacts"
 
 export default () => {
 
-  const navLinks = [
-    { label: 'Калькулятор', href: '#hero' },
-    { label: 'О нас', href: '#advantages' },
-    { label: 'Гарантии', href: '#guarantees' },
-    { label: 'Отзывы', href: '#feedback' },
-  ]
-
   return (
     <>
-      <header className="header" data-js-header="">
+      <header
+        className="header"
+        data-js-header=""
+      >
         <div className="header__wrapper container">
           <div className="header__head">
             <Logo
@@ -36,52 +33,19 @@ export default () => {
                 </p>
               </div>
               <div className="header__info-separator"></div>
-              <div className="header__contacts">
-                <a
-                  className="header__contacts-phone"
-                  href="tel:+78001234567"
-                >
-                  +7 (800) 123 45-67
-                </a>
-                <p className="header__contacts-title hidden-mobile">
-                  Звонки по России бесплатны
-                </p>
-
-                <BurgerButton
-                  className="header__burgerButton"
-                  extraAttrs={{ 'data-js-mobile-menu-burger-button': "" }}
-                />
-              </div>
+              <Contacts
+                className="header__contacts"
+              />
+              <BurgerButton
+                className="header__burgerButton"
+                extraAttrs={{ 'data-js-mobile-menu-burger-button': "" }}
+              />
             </div>
           </div>
 
           <div className="header__menu hidden-mobile" data-js-mobile-menu="">
             <div className="header__menu-wrapper">
-              <nav className="header__nav">
-                <ul className="header__nav-list">
-                  {navLinks.map((link, index) => {
-
-                    const { label, href } = link
-
-                    return (
-                      <li
-                        className="header__nav-item"
-                        key={index}
-                      >
-                        <a
-                          className={clsx("header__nav-link")}
-                          href={href}
-                          title={label}
-                        >
-                          <span className="visually-hidden">{label}</span>
-                          {label}
-                        </a>
-                      </li>
-                    )
-                  })}
-                </ul>
-              </nav>
-
+              <Navigation sectionName="header" />
               <Button className="header__button">Оставить заявку</Button>
             </div>
 

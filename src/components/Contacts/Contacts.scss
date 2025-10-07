@@ -1,0 +1,47 @@
+.contacts {
+
+  text-align: right;
+
+  @include mobile {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+  }
+
+  &__phone {
+    @include fluid-text(36, 30);
+
+    font-weight: 900;
+
+    @include laptop {
+      @include fluid-text(30, 24);
+
+    }
+
+    @include tablet {
+      font-size: 24px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+    }
+
+  }
+
+  &__title {
+    @include fluid-text(24, 20);
+
+    font-weight: 300;
+
+    @include laptop {
+      @include fluid-text(20, 16);
+    }
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+  }
+
+
+}

@@ -1,4 +1,4 @@
-import "./questions.scss"
+import "./Questions.scss"
 import Field from '@/components/Field'
 import Button from "@/components/Button"
 
